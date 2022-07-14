@@ -4,6 +4,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import "bootstrap/dist/js/bootstrap.js"
 
 import Header from './components/Header';
+import Plot from './components/Plot';
 
 function App() {
 
@@ -11,6 +12,7 @@ function App() {
     <div className="App">
 
        <Header/>
+       <Plot/>
 
     </div>
 

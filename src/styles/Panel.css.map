@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAKA,AAAA,MAAM,CAAC;EAEL,MAAM,EANS,GAAG,CAAC,KAAK,CAAC,KAAK;EAO9B,gBAAgB,EARS,KAAK;EAS9B,KAAK,EAPS,KAAK;EAQnB,OAAO,EAPS,IAAI;CASrB",
+    "sources": [
+        "Panel.scss"
+    ],
+    "names": [],
+    "file": "Panel.css"
+}
