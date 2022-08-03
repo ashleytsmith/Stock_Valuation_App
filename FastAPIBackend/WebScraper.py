@@ -15,6 +15,19 @@ class WebScraper():
         table_data = table_data[2:] # remove column titles
         table_data = [[re.sub('[$]', '', x) for x in y] for y in table_data] # remove dollar signs
 
+        date, price, sales , price_to_sales_ratio = map(list, zip(*table_data)) # split into sepearate lists
+
+        table_data = {   #convert to dictionary
+        
+        'date': date,
+        'price': price,
+        'sales': sales,
+        'price_to_sales_ratio': price_to_sales_ratio,
+        
+        }
+        
+        #print("date", date, "\n", "price", price, "\n", "sales", sales, "\n" ,"price to sales", price_to_sales_ratio, "\n" )
+
         jsonString = json.dumps(table_data)
         
         return jsonString
