@@ -5,8 +5,14 @@ import axios from 'axios';
 
 const fetchJSON = () => {
 
+
+    
+     return axios.get('http://localhost:8000')
     //works
-    return axios.get('https://jsonplaceholder.typicode.com/posts')
+    //return axios.get('https://jsonplaceholder.typicode.com/posts')
+
+
+
     //return axios.get('https://jsonplaceholder.typicode.com/users')
     //return axios.get('https://random.dog/woof.json')
 
@@ -45,9 +51,8 @@ function Plot() {
         <h1>Posts</h1>
         
         {
-            data.data.map((post, index) => {
-                return <li key={index}>{post.title}</li>
-            })
+            <div >{JSON.stringify(data.data)}</div>
+            
         }
 
         
