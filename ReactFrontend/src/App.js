@@ -4,7 +4,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import "bootstrap/dist/js/bootstrap.js"
 
 import Header from './components/Header';
-import Plot from './components/PlotWindow';
+import Plot from './components/PlotPanel';
 
 function App() {
 
