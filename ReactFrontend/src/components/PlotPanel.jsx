@@ -1,4 +1,5 @@
 import "../styles/Panel.css";
+import "../styles/RoundedBorder.css";
 import { useQuery } from "react-query";
 import axios from "axios";
 import Plot from "react-plotly.js";
@@ -105,13 +106,19 @@ function PlotPanel() {
   return (
     <div className="container-fluid p-5 my-5 text-center Panel">
       <h1>Plot</h1>
+
+
+      <div className="RoundedBorder">
       
-      <Plot
+      <Plot 
         data = {PriceData}
         layout={PricePlotLayout}
         style={PlotlyStyle}
         useResizeHandler={true} 
+        plot_bgcolor = 'black'
       />
+
+      </div>
 
        <Plot
         data = {PriceToSalesData}
@@ -119,6 +126,8 @@ function PlotPanel() {
         style={PlotlyStyle}
         useResizeHandler={true} 
       />
+
+     
 
     </div>
   );
