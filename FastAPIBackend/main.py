@@ -13,10 +13,15 @@ app.add_middleware(
     allow_origins=origins,
 )
 
-webscraper = WebScraper() 
+webscraper = WebScraper()
 
-data = webscraper.scrapedata('sales')
 
 @app.get("/")
 async def root():
+    return {}
+
+
+@app.get("/{symbol}")
+async def call_scraper(symbol):
+    data = webscraper.scrapedata(symbol)
     return {data}

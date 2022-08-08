@@ -5,7 +5,7 @@ import axios from "axios";
 import Plot from "react-plotly.js";
 
 const fetchJSON = () => {
-  return axios.get("http://localhost:8000");
+  return axios.get("http://localhost:8000/AAPL");
 };
 
 function PlotPanel() {

@@ -6,7 +6,13 @@ class WebScraper():
 
     def scrapedata(self, ticker):
 
-        response = httpx.get('https://www.macrotrends.net/stocks/charts/AAPL/apple/price-sales')
+        source = 'https://www.macrotrends.net/stocks/charts/'
+        descriptor = '/apple/price-sales'
+        url = source + ticker + descriptor
+        print(url)
+
+        #response = httpx.get('https://www.macrotrends.net/stocks/charts/AAPL/apple/price-sales')
+        response = httpx.get(url)
        
         soup = BeautifulSoup(response.text, 'html.parser')
         html_table = soup.find('table',{'class': 'table'})
@@ -26,8 +32,6 @@ class WebScraper():
         
         }
         
-        #print("date", date, "\n", "price", price, "\n", "sales", sales, "\n" ,"price to sales", price_to_sales_ratio, "\n" )
-
         jsonString = json.dumps(table_data)
         
         return jsonString
