@@ -7,7 +7,6 @@ import Plot from "react-plotly.js";
 const fetchJSON = () => {
 
   let ticker = "AAPL/apple"
-  //let ticker = "MSFT/microsoft"
   //let ticker = "JPM/jpmorgan-chase"
   const backendHost = "http://localhost:8000/"
   let queryString = backendHost + ticker
@@ -45,7 +44,7 @@ function PlotPanel() {
   
 
   
-  console.log(price_to_sales);
+  //console.log(price_to_sales);
 
   
   

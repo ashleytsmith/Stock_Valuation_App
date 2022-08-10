@@ -1,4 +1,4 @@
-from WebScraper import WebScraper
+import WebScraper
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
@@ -13,7 +13,7 @@ app.add_middleware(
     allow_origins=origins,
 )
 
-webscraper = WebScraper()
+#webscraper = WebScraper()
 
 
 @app.get("/")
@@ -23,5 +23,5 @@ async def root():
 
 @app.get("/{symbol:path}", name="path-convertor")
 async def call_scraper(symbol):
-    data = webscraper.scrapedata(symbol)
+    data = WebScraper.scrapedata(symbol)
     return {data}
