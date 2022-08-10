@@ -21,7 +21,7 @@ async def root():
     return {}
 
 
-@app.get("/{symbol}")
+@app.get("/{symbol:path}", name="path-convertor")
 async def call_scraper(symbol):
     data = webscraper.scrapedata(symbol)
     return {data}

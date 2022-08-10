@@ -7,11 +7,10 @@ class WebScraper():
     def scrapedata(self, ticker):
 
         source = 'https://www.macrotrends.net/stocks/charts/'
-        descriptor = '/apple/price-sales'
+        descriptor = '/price-sales'
         url = source + ticker + descriptor
         print(url)
 
-        #response = httpx.get('https://www.macrotrends.net/stocks/charts/AAPL/apple/price-sales')
         response = httpx.get(url)
        
         soup = BeautifulSoup(response.text, 'html.parser')

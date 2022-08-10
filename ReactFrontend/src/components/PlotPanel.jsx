@@ -5,11 +5,19 @@ import axios from "axios";
 import Plot from "react-plotly.js";
 
 const fetchJSON = () => {
-  return axios.get("http://localhost:8000/AAPL");
+
+  let ticker = "AAPL/apple"
+  //let ticker = "MSFT/microsoft"
+  //let ticker = "JPM/jpmorgan-chase"
+  const backendHost = "http://localhost:8000/"
+  let queryString = backendHost + ticker
+
+
+  return axios.get(queryString);
 };
 
 function PlotPanel() {
-  const { data, error, isError, isLoading } = useQuery(
+  let { data, error, isError, isLoading } = useQuery(
     "json-tutorial-code",
     fetchJSON,
     {
@@ -27,12 +35,12 @@ function PlotPanel() {
   }
 
   console.log(data);
-  const plot_data = JSON.parse(data.data);
+  let plot_data = JSON.parse(data.data);
   console.log(plot_data);
 
-  const date = plot_data["date"];
-  const price = plot_data["price"];
-  const price_to_sales = plot_data["price_to_sales_ratio"];
+  let date = plot_data["date"];
+  let price = plot_data["price"];
+  let price_to_sales = plot_data["price_to_sales_ratio"];
 
   
 
