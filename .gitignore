@@ -16,6 +16,11 @@ ReactFrontend/build
 
 *.pyc
 
+#raw data
+
+*.db
+ParseTickerData/raw_data.txt
+
 # misc
 .DS_Store
 .env.local

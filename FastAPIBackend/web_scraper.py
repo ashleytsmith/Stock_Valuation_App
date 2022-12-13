@@ -24,7 +24,6 @@ def scrapedata(ticker):
         
 def scrape_raw_html(ticker,descriptor):
 
-    #descriptor = '/price-sales'
     url = source + ticker + descriptor
     response = httpx.get(url)
 
@@ -42,7 +41,6 @@ def extract_table_data(response,descriptor_labels):
 
     values = map(list, zip(*table_data)) # split into sepearate lists
     keys = descriptor_labels
-
 
     table_data = dict(zip(keys,values))
     
