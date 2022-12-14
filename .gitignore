@@ -19,7 +19,19 @@ ReactFrontend/build
 #raw data
 
 *.db
+db.sqlite
 ParseTickerData/raw_data.txt
+
+# styling
+
+*.css
+!index.css
+*.css.map
+
+
+# VS code
+
+.vscode
 
 # misc
 .DS_Store
