@@ -1,9 +1,0 @@
-{
-    "version": 3,
-    "mappings": "AAOA,AAAA,cAAc,CAAA;EAEZ,MAAM,EARS,GAAG,CAAC,KAAK,CAAC,KAAK;EAS9B,gBAAgB,EAVS,KAAK;EAW9B,KAAK,EATS,KAAK;EAUnB,OAAO,EATS,GAAG;EAUnB,OAAO,EATS,IAAI;EAUpB,aAAa,EATS,KAAK;CAW5B",
-    "sources": [
-        "RoundedBorder.scss"
-    ],
-    "names": [],
-    "file": "RoundedBorder.css"
-}
